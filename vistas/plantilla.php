@@ -10,9 +10,8 @@
 <body>
 
 
-    <?php include "vistas/modulos/inicio.php"; ?>
+    <?php include "vistas/modulos/menu.php"; ?>
 
-    <?php include "vistas/modulos/contenido.php"; ?>
 
 
 
@@ -24,15 +23,15 @@
 
                 #ISSET: isset() Determina si una variable está definida y no es NULL
 
-                if(isset($_GET["modulos"])){
+                if(isset($_GET["modulo"])){
 
-                    if( $_GET["modulos"] == "registro" ||
-                        $_GET["modulos"] == "ingreso" ||
-                        $_GET["modulos"] == "inicio" ||
-                        $_GET["modulos"] == "inventario" ||
-                        $_GET["modulos"] == "salir"){
+                    if( $_GET["modulo"] == "registro" ||
+                        $_GET["modulo"] == "ingreso" ||
+                        $_GET["modulo"] == "contenido" ||
+                        $_GET["modulo"] == "inventario" ||
+                        $_GET["modulo"] == "salir"){
 
-                        include "modulos/".$_GET["modulos"].".php";
+                        include "modulos/".$_GET["modulo"].".php";
 
                     }else{
 
