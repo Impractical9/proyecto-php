@@ -18,7 +18,7 @@ class ControladorRegistro{
 
             $respuesta = ModeloRegistro::mdlRegistro($tabla, $datos);
 
-            return $respuesta;
+            
 
         }
 
