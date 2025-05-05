@@ -5,7 +5,7 @@
                 <?php if (isset($_GET["modulo"])): ?>
                     <!-- Inicio -->
                     <li class="nav-item">
-                        <a href="index.php?modulo=inicio" class="nav-link <?= ($_GET["modulo"] == "inicio") ? 'active' : '' ?>">Inicio</a>
+                        <a href="index.php?modulo=contenido" class="nav-link <?= ($_GET["modulo"] == "contenido") ? 'active' : '' ?>">Inicio</a>
                     </li>
                     
                     <!-- Registro -->
