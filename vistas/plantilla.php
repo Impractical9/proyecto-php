@@ -29,6 +29,7 @@
                         $_GET["modulo"] == "ingreso" ||
                         $_GET["modulo"] == "contenido" ||
                         $_GET["modulo"] == "inventario" ||
+                        $_GET["modulo"] == "roles" ||
                         $_GET["modulo"] == "salir"){
 
                         include "modulos/".$_GET["modulo"].".php";
