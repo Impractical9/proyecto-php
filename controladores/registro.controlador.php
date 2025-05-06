@@ -82,7 +82,33 @@ class ControladorRegistro{
         }
 
     }
+      /*=============================================
+    Actualizar Usuario
+    =============================================*/
+
+    public static function ctrActualizar() {
+        if (isset($_POST['actualizarNombre'], $_POST['actualizarTelefono'], $_POST['actualizarCorreo'], $_POST['actualizarClave'])) {
+
+            $tabla = "registro";
+
+            $datos = array(
+                "id" => $_GET["id"], 
+                "nombre" => $_POST["actualizarNombre"],
+                "telefono" => $_POST["actualizarTelefono"],
+                "correo" => $_POST["actualizarCorreo"],
+                "clave" => password_hash($_POST["actualizarClave"], PASSWORD_DEFAULT)
+            );
+
+            $respuesta = ModeloRegistro::mdlActualizarRegistro($tabla, $datos);
+
+            return $respuesta;
+        }
+
+        return null;
+    }
+
 }
+
 
 
 

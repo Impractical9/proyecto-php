@@ -85,7 +85,7 @@ class ModeloRegistro {
     =============================================*/
 
     public static function mdlActualizarRegistro($tabla, $datos) {
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre, telefono = :telefono, correo = :correo, clave = :clave WHERE id_registro = :id");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET pers_nombre = :nombre, pers_telefono = :telefono, pers_correo = :correo, pers_clave = :clave WHERE pk_id_registro = :id");
 
         $stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
         $stmt->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
@@ -101,5 +101,4 @@ class ModeloRegistro {
 
         $stmt = null;
     }
-
-}
+} 
